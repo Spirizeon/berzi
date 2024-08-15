@@ -1,0 +1,338 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #0c0c0d;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*
+body.glow {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.9));
+    transition: background 0.3s ease;
+}
+*/
+
+
+header {
+  width: 100%;
+  padding: 1rem, 2rem;
+  display: flex;
+  justify-content: space-between;
+	align-items: right;
+  background-color: #1e1e1f;
+  color: #bbb;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+	margin-top: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #bbb;
+  font-size: 1.1rem;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  max-width: 1200px;
+	box-sizing: border-box;
+	width:100%;
+	overflow: hidden;
+}
+
+.hero-text h2 {
+	max-width: 90%;
+	font-family:Gruppo;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #78787a;
+  margin-top: 10px;
+	font-family:Gruppo;
+}
+
+.buttons {
+  margin-top: 60px;
+}
+
+.btn {
+  padding: 10px 20px;
+  margin-right: 10px;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.btn-installation {
+  background-color: #407bff;
+}
+
+.btn-docs {
+  background-color: #3b3b3b;
+}
+
+
+.hero-logo:hover img {
+	transition: filter 0.3s ease;
+  width: 200px;
+	box-shadow: 0 0 30px 15px rgba(64, 123, 255, 0.7);
+	border-radius:70%;
+	filter: drop-shadow(0 0 10px rgba(255,255,255,0.5))
+}
+
+
+
+.hero-logo img {
+	transition: filter 0.3s ease;
+  width: 200px;
+	box-shadow: 0 0 30px 15px rgba(64, 123, 255, 0.7);
+	border-radius:70%;
+}
+
+
+@media (max-width: 768px){
+	.hero{
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+	
+	.hero-text{
+		max-width: 100%;
+	}
+
+	.hero-logo img{
+		width: 200px;
+		margin-top: 20px;
+	}
+
+}
+
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1200px;
+  padding: 40px 0;
+}
+
+.feature {
+  text-align: center;
+  width: 30%;
+}
+
+.feature h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.feature p {
+  color: #78787a;
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;  /* Align title and tagline vertically */
+}
+
+.logo h1 {
+  font-size: 1.8rem;  /* Adjust size of title */
+  color: #b9bbff;
+}
+
+.logo .tagline {
+  font-size: 1rem;
+  margin-left: 10px;  /* Add space between title and tagline */
+  color: #78787a;
+}
+
+.class navbar{
+	align: right;
+}
+
+.hero-text h2 {
+  font-size: 3rem;
+  color: transparent; /* Make text transparent to show the gradient */
+	background: linear-gradient(90deg, #f6e600, #ff0000);
+  background-clip: text; /* Use the background as the text fill */
+  -webkit-background-clip: text; /* Ensure compatibility with WebKit browsers */
+  -webkit-text-fill-color: transparent; /* Required for WebKit browsers */
+}
+
+.grady {
+  font-size: 3rem;
+  color: transparent; /* Make text transparent to show the gradient */
+	background: linear-gradient(90deg, #407bff, #f66c00);
+  background-clip: text; /* Use the background as the text fill */
+  -webkit-background-clip: text; /* Ensure compatibility with WebKit browsers */
+  -webkit-text-fill-color: transparent; /* Required for WebKit browsers */
+}
+
+/* General section styling */
+.progress-line-section {
+  background-color: #0c0c0d;
+  padding: 50px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.progress-container {
+  position: relative;
+  width: 80%;
+  max-width: 1200px;
+}
+
+/* Progress line with gradient */
+.progress-line {
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to top, #ffdd00, #0066ff); /* Gradient from yellow to blue */
+  //left: 50%;
+  transform: translateX(-50%);
+  z-index: 1; /* Ensure the line is behind the text */
+}
+
+/* Project items */
+.project {
+  position: relative;
+  display: flex;
+  margin-bottom: 50px;
+  padding-left: 50px;
+  z-index: 2; /* Text and icon on top of the line */
+}
+
+
+
+.project-content {
+	align: left;
+}
+
+.project h3 {
+  color: #00d0ff; /* Project title color */
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.project p {
+  color: #ffffff;
+  font-size: 1rem;
+  margin: 5px 0 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .progress-container {
+    width: 90%;
+  }
+  
+  .project {
+    padding-left: 20px;
+  }
+
+  .project-icon {
+    left: calc(50% - 20px);
+    width: 40px;
+    height: 40px;
+  }
+
+  .project-content {
+    padding-left: 60px;
+  }
+
+  .project h3 {
+    font-size: 1.3rem;
+  }
+
+  .project p {
+    font-size: 0.9rem;
+  }
+}
+    /* Footer styling */
+    footer {
+      background-color: #000;
+      color: #fff;
+      width: 100%;
+      padding: 20px 40px;
+      box-sizing: border-box;
+    }
+
+    /* Container to align items in the footer */
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Footer sections */
+    .footer-section {
+      flex: 1;
+			margin: 0 20px;
+} /* Section titles */
+    h3 {
+      margin-bottom: 10px;
+    }
+		a { 
+			text-decoration: none;
+
+}
+    /* Unordered list styling */
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    /* Link styling */
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* On hover, the links get underlined */
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive design for smaller screens */
+    @media (max-width: 768px) {
+      .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-section {
+        margin-bottom: 20px;
+      }
+    }
+
+
+.gruppo-regular {
+  font-family: "Gruppo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
