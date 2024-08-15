@@ -289,7 +289,7 @@ nav ul li a {
     /* Footer sections */
     .footer-section {
       flex: 1;
-			margin: 0 20px;
+			align: center;
 } /* Section titles */
     h3 {
       margin-bottom: 10px;
